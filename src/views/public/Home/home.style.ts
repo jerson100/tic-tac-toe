@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const HomeContainerStyle = styled.div`
   display: flex;
@@ -9,7 +10,7 @@ const HomeContainerStyle = styled.div`
   flex-direction: column;
 `;
 
-const HomeTitleStyle = styled.h1`
+const HomeTitleStyle = styled(motion.h1)`
   font-size: 40px;
   font-weight: bold;
   color: rgb(232, 232, 232);
