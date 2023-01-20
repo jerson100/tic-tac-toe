@@ -9,12 +9,13 @@ const HomeContainerStyle = styled.div`
   flex-direction: column;
 `;
 
-const HomeTitleStyle = styled.div`
-  font-size: 30px;
+const HomeTitleStyle = styled.h1`
+  font-size: 40px;
   font-weight: bold;
   color: rgb(232, 232, 232);
   margin-bottom: 1rem;
   text-align: center;
+  font-family: "Pacifico", cursive;
 `;
 
 export { HomeContainerStyle, HomeTitleStyle };

@@ -8,10 +8,13 @@ export const LoadingBoardContainerStyle = styled(motion.div)`
   border: solid 1px red;
   background-color: rgba(255, 0, 0, 0.2);
   transform: translateX(-50%);
-  padding: 1rem;
+  padding: 0.8rem 1rem;
+  min-width: 160px;
   z-index: 2;
+  border-radius: 5px;
   p {
-    font-size: 22px;
+    font-size: 20px;
+    text-align: center;
     color: white;
   }
 `;
