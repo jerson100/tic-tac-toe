@@ -8,7 +8,7 @@ import useRepeatAnimation from "../../../../../hooks/useRepeatAnimation";
 const LoadingBoard: React.FunctionComponent<
   PropsWithChildren & LoadingProps
 > = ({ isLoading = false }) => {
-  const pounts = useRepeatAnimation({ delay: 400 });
+  const points = useRepeatAnimation({ delay: 400 });
   return (
     <>
       <AnimatePresence>
@@ -19,7 +19,7 @@ const LoadingBoard: React.FunctionComponent<
             animate="show"
             exit="exit"
           >
-            <p>Cargando{pounts}</p>
+            <p>Cargando{points}</p>
           </LoadingBoardContainerStyle>
         ) : null}
       </AnimatePresence>
