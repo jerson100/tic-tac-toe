@@ -9,6 +9,9 @@ const containerVariants: Variants = {
     scale: 1,
     opacity: 1,
     transition: {
+      duration: 1,
+      type: "spring",
+      bounce: 0.5,
       when: "beforeChildren",
       staggerChildren: 0.3,
     },

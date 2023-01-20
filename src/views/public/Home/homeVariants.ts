@@ -11,7 +11,7 @@ const homeVariants: Variants = {
     transition: {
       duration: 1,
       type: "spring",
-      bounce: 0.6,
+      bounce: 0.5,
     },
   },
 };
