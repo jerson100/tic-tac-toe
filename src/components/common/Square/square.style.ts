@@ -9,9 +9,9 @@ const SquareContainerStyle = styled(motion.div)`
   color: rgb(232, 232, 232);
   box-shadow: 0px 0px 4px 0px red;
   cursor: pointer;
-  transition: transform 0.4s linear;
+  transition: transform 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
   &:hover {
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
 `;
 
