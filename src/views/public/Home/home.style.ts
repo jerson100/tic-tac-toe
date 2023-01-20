@@ -6,7 +6,6 @@ const HomeContainerStyle = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: rgb(36, 36, 36);
   flex-direction: column;
 `;
 
