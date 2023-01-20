@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const BoardContainerStyle = styled.div`
+const BoardContainerStyle = styled(motion.div)`
   /* border: solid 1px red; */
   display: grid;
   grid-template-columns: repeat(3, 100px);
