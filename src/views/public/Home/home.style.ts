@@ -15,7 +15,6 @@ const HomeTitleStyle = styled.h1`
   color: rgb(232, 232, 232);
   margin-bottom: 1rem;
   text-align: center;
-  font-family: "Pacifico", cursive;
 `;
 
 export { HomeContainerStyle, HomeTitleStyle };
