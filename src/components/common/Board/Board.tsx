@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Square from "../Square";
+import Square from "./components/Square";
 import { BoardContainerStyle } from "./board.style";
 import { containerVariants } from "./board.variants";
 import LoadingBoard from "./components/LoadingBoard";
