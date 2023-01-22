@@ -15,6 +15,6 @@ export const LoadingBoardContainerStyle = styled(motion.div)`
   p {
     font-size: 20px;
     text-align: center;
-    color: white;
+    color: ${({ theme }) => theme.colors.TEXT};
   }
 `;

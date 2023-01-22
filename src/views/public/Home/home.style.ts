@@ -12,7 +12,7 @@ const HomeContainerStyle = styled.div`
 const HomeTitleStyle = styled(motion.h1)`
   font-size: 40px;
   font-weight: bold;
-  color: rgb(232, 232, 232);
+  color: ${({ theme }) => theme.colors.PRIMARY};
   margin-bottom: 1rem;
   text-align: center;
 `;
