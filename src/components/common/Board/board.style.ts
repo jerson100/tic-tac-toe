@@ -8,6 +8,7 @@ const BoardContainerStyle = styled(motion.div)`
   grid-template-rows: repeat(3, 100px);
   row-gap: 1rem;
   column-gap: 1rem;
+  margin-bottom: 1rem;
 `;
 
 export { BoardContainerStyle };

@@ -4,8 +4,9 @@ import { CurrentUserContainerStyle } from "./currentUser.style";
 const CurrentUser = ({ current }: CurrentUserProps) => {
   return (
     <CurrentUserContainerStyle>
-      <div className={current === "x" ? "active" : ""}>x</div>
-      <div className={current === "o" ? "active" : ""}>o</div>
+      <p>
+        turno: <span>{current}</span>
+      </p>
     </CurrentUserContainerStyle>
   );
 };
