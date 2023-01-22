@@ -27,13 +27,11 @@ const Board = () => {
       const square: ISquare | undefined = copy_grid.find(
         ({ index: indexC }: ISquare) => index === indexC
       );
-      if (square) {
-        if (!square.active) {
-          square.active = !square.active;
-          square.character = currentUser;
-          setGrid(copy_grid);
-          setCurrentUser((prev) => (prev === "x" ? "o" : "x"));
-        }
+      if (square && !square.active) {
+        square.active = !square.active;
+        square.character = currentUser;
+        setGrid(copy_grid);
+        setCurrentUser((prev) => (prev === "x" ? "o" : "x"));
       }
     }
   };
