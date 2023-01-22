@@ -1,3 +1,4 @@
+import Author from "../../../components/Author";
 import Board from "../../../components/common/Board";
 import { HomeContainerStyle, HomeTitleStyle } from "./home.style";
 import { homeVariants } from "./homeVariants";
@@ -14,6 +15,7 @@ const Home = () => {
         Tic tac toe
       </HomeTitleStyle>
       <Board />
+      <Author />
     </HomeContainerStyle>
   );
 };
