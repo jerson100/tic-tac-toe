@@ -1,8 +1,18 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { SquareStyleProps } from "../../../../../types";
+import { HTMLProps } from "react";
 
-const SquareContainerStyle = styled(motion.div)`
+const SquareContainerStyle = styled(motion.div)<
+  HTMLProps<HTMLDivElement> & SquareStyleProps
+>`
   border: solid 1px ${({ theme }) => theme.colors.BORDER};
+  background-color: ${({ active, character }) =>
+    active
+      ? `${
+          character === "x" ? "rgba(0,0,255,.3)" : "rgba(255,0,0,.3)"
+        } !important`
+      : "transparent"};
   display: flex;
   justify-content: center;
   align-items: center;

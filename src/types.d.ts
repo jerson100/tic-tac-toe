@@ -13,3 +13,16 @@ export interface RepeatAnimation {
 export interface CurrentUserProps {
   current: UserType;
 }
+
+export interface ISquare {
+  active: boolean;
+  character: UserType | "";
+  index: number;
+}
+
+export interface SquareProps extends ISquare {
+  onclick: (square: ISquare) => void;
+}
+
+export interface SquareStyleProps
+  extends Pick<ISquare, "active" | "character"> {}
