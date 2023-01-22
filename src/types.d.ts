@@ -12,6 +12,7 @@ export interface RepeatAnimation {
 
 export interface CurrentUserProps {
   current: UserType;
+  winner: string | null;
 }
 
 export interface ISquare {

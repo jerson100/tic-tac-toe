@@ -5,6 +5,7 @@ import { containerVariants } from "./board.variants";
 import LoadingBoard from "./components/LoadingBoard";
 import CurrentUser from "./components/CurrentUser";
 import { ISquare, UserType } from "../../../types";
+import { validateGame } from "../../../assets/js/tictactoe";
 
 const Board = () => {
   const [grid, setGrid] = useState<ISquare[]>([
@@ -18,20 +19,24 @@ const Board = () => {
     { active: false, character: "", index: 8 },
     { active: false, character: "", index: 9 },
   ]);
+  const [winner, setWinner] = useState<string | null>(null);
   const [isCompleteShowAnimation, setIsCompleteShowAnimation] =
     useState<boolean>(false);
   const [currentUser, setCurrentUser] = useState<UserType>("x");
   const handleClick = ({ index }: ISquare) => {
-    if (isCompleteShowAnimation) {
-      const copy_grid = [...grid];
-      const square: ISquare | undefined = copy_grid.find(
-        ({ index: indexC }: ISquare) => index === indexC
-      );
-      if (square && !square.active) {
-        square.active = !square.active;
-        square.character = currentUser;
-        setGrid(copy_grid);
-        setCurrentUser((prev) => (prev === "x" ? "o" : "x"));
+    if (!winner) {
+      if (isCompleteShowAnimation) {
+        const copy_grid = [...grid];
+        const square: ISquare | undefined = copy_grid.find(
+          ({ index: indexC }: ISquare) => index === indexC
+        );
+        if (square && !square.active) {
+          square.active = !square.active;
+          square.character = currentUser;
+          setGrid(copy_grid);
+          setCurrentUser((prev) => (prev === "x" ? "o" : "x"));
+          setWinner(validateGame(copy_grid));
+        }
       }
     }
   };
@@ -54,7 +59,7 @@ const Board = () => {
           />
         ))}
       </BoardContainerStyle>
-      <CurrentUser current={currentUser} />
+      <CurrentUser current={currentUser} winner={winner} />
       <LoadingBoard isLoading={!isCompleteShowAnimation} />
     </>
   );
